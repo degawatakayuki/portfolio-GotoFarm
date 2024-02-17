@@ -1,0 +1,16 @@
+$main-color: #2498B3;
+
+$bg-color1: #FFF7EF;
+
+$text-maincolor: #707070;
+
+$border-main: #707070;
+
+$font-sp: calc(10 / 375 * 100vw);   //スマホのフォントサイズ　10px
+$font-pc: 62.5%;                    //PCのフォントサイズ　10px
+
+
+/* ブレークポイント */
+$md-breakpoint: 641px;
+$pc-breakpoint: 769px;
+$wd-breakpoint: 961px;

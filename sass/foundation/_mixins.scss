@@ -1,0 +1,20 @@
+@use "../foundation/variables" as var;
+
+// mixin ブレークポイント
+@mixin breakpoint( $point ) {
+	@if $point == tablet {
+		@media ( min-width: var.$md-breakpoint ) {
+			@content ;
+		}
+	}
+	@if $point == pc {
+		@media ( min-width: var.$pc-breakpoint ) {
+			@content ;
+		}
+	}
+	@if $point == wide {
+		@media ( min-width: var.$wd-breakpoint ) {
+			@content ;
+		}
+	}
+}
