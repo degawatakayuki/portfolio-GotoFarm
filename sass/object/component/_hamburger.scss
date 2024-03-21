@@ -1,152 +1,64 @@
 @use  "../../foundation/mixins" as min;
 @use  "../../foundation/variables" as var;
 //ハンバーガーメニュー
-.c-hamburgerBlock-sp {
+.c-hambugerIcon {
+    position: relative;
     display: block;
-    width: 26px;
-    height: 26px;
-
+    width: 4.8rem;
+    height: 4.8rem;
+    border: none;
+    border-radius: 50%;
+    background: #FED966;
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.16);
+    z-index: 110;
+    @include min.breakpoint(tablet) {
+        display: none;
+    }
+    &-lo {
+        position: absolute;
+        top: 3%;
+        right: 5%;
+    }
+    &--open {
+        position: fixed;
+    }
     @include min.breakpoint(pc) {
         display: none;
     }
-
-    .hamburger {
+    &__line {
         display: block;
-        position: relative;
-        padding: 3px;
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
-        text-align: center;
-    
-        @include min.breakpoint(tablet) {
-            display: none;
-        }
-    
-        span {
-            display: block;
-            height: 2px;
-            background: var.$white;
+        width: 1.8rem;
+        height: 0.2rem;
+        background: #000;
+        &-lo {
             position: absolute;
-            top: 50%;
-            left: 3px;
-            right: 3px;
-            transform: translateY(-50%);
-            transition: all ease .15s;
-    
-            &::before {
-                content: '';
-                display: block;
-                height: 2px;
-                background: var.$white;
-                position: absolute;
-                top: -8px;
-                left: 0;
-                right: 0;
-                transition: all ease .15s;
+            left: 50%;
+            &:first-of-type {
+                top: 40%;
+                transform: translate(-50%, -50%);
             }
-            &::after {
-                content: '';
-                display: block;
-                height: 2px;
-                background: var.$white;
-                position: absolute;
-                top: 8px;
-                left: 0;
-                right: 0;
-                transition: all ease .15s;
-            }
-        }
-    }
-    //ハンバーガーメニュー
-    #navToggle {
-        position: absolute;
-        top: -330px;
-    }
-    .spMainNav {
-        display: none;
-        transition: all 1s;
-    }
-    .spMainNav__list {
-        align-items: center;
-        position: relative;
-        background-color: var.$bg-white;
-        opacity: 1;
-        padding: 100px 0;
-        
-        & > li {
-            display: block;
-            height: 100%;
-            text-align: center;
-            align-self: center;
-
-            &:hover {
-
-                a {
-                    color: #000;
-                } 
-            }
-            
-            a {
-                display: inline-block;
-                width: 100%;
-                height: 100%;
-                cursor: pointer;
-                font-weight: bold;
-                color: var.$white;
-                font-size: 20px;
-
-                span {
-                    display: block;
-                    font-size: 14px;
-                }
-            }
-        }
-    }
-
-    //ハンバーガーメニューの挙動
-    #navToggle:focus-visible ~ .hamburger {
-        box-shadow: 1px 1px 2px gray;
-    }
-
-    #navToggle:checked ~ .hamburger {
-
-        span {
-            background: transparent;
-
-            &::before {
+            &:nth-of-type(2) {
                 top: 50%;
-                transform: rotate(45deg);
+                transform: translate(-50%, -50%);
             }
-            &::after {
+            &:last-of-type {
+                top: 60%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        //ハンバーがメニューがクリックされた時のXボタン
+        &--open {
+            &:first-of-type {
                 top: 50%;
-                transform: rotate(-45deg);
+                transform: translate(-50%, -50%) rotate(-45deg);
             }
-        }
-    }
-
-    #navToggle:checked ~ .spMainNav {
-
-        display: block;
-        transition: all 1s;
-        
-
-        .spMainNav__list {
-            position: absolute;
-            background: #4b6cb7;
-            top: 56px;
-            left: 0;
-            right: 0;
-
-            li {
-                text-align: center;
-                padding-top: 10px;
-                padding-bottom: 10px;
+            &:nth-of-type(2) {
+                display: none;
             }
-        }
-        
-        .spMainNav__item {
-            border-bottom: 1px solid #eee;
+            &:last-of-type {
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
         }
     }
 }

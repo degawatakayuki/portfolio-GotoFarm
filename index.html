@@ -5,23 +5,358 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title><!-- ***************HPタイトル******************* -->
-    <meta name="description" content=""><!-- ***************HP説明******************* -->
+    <title>長野県茅野市の農園 | 蓼科ごとう農園</title><!-- ***************HPタイトル******************* -->
+    <meta name="description" content="「蓼科ごとう農園」は、蓼科の新鮮な農産物を提供するだけでなく、蓼科の自然環境を大切に守り、後世に残すことを使命としています。"><!-- ***************HP説明******************* -->
     <meta name="keywords" content=""><!-- ***************検索キーワード******************* -->
     <meta name="robots" content="noindex"/><!-- ***************完成したら削除******************* -->
     <!-- リンク -->
     <link rel="icon" href="img/favicon.ico"><!-- ***************ファビコン******************* -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&family=Noto+Sans:wght@700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/bc4df06650.js" crossorigin="anonymous"></script>
-    <!-- OGPを設定 -->
-    <meta property="og:title" content="タイトル">
-    <meta property="og:type" content="website　または　blog　または　article">
-    <meta property="og:description" content="ページの簡単な説明">
-    <meta property="og:url" content="ページのURL">
-    <meta property="og:site_name" content="サイトのタイトル">
-    <meta property="og:image" content="サムネイル画像のURL">
+    <script  src="https://code.jquery.com/jquery-3.7.1.js"  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="  crossorigin="anonymous"></script>
+    <link  rel="stylesheet"  href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script > let submited=false; </script>
 </head>
 <body>
-    
+    <main>
+        <div class="mv">
+            <div class="loading">
+                <div class="c-logo c-logo--loading">
+                    <img src="images/logo-01.svg" alt="" class="c-logo__logoImg--lg">
+                    <img src="images/logo-02.png" alt="蓼科ごとう農園" class="c-logo__logoName">
+                </div><!-- /.logo -->
+            </div>
+            <div class="mv__cover"></div>
+            <h1 class="mv__title mv__title-lo">
+                <span class="mv__title--decoration mv__title--decoration-lo">あなたは知ってる？</span>
+                <span class="mv__title--decoration mv__title--decoration-lo">蓼科を丸ごと味わう</span>
+                <span class="mv__title--decoration mv__title--decoration-lo">喜びを</span>
+            </h1>
+            <a class="c-hambugerIcon c-hambugerIcon-lo" id="hambugerIcon">
+                <span class="c-hambugerIcon__line c-hambugerIcon__line-lo"></span>
+                <span class="c-hambugerIcon__line c-hambugerIcon__line-lo"></span>
+                <span class="c-hambugerIcon__line c-hambugerIcon__line-lo"></span>
+            </a>
+            <div class="mv__navSp mv__navSp--open mv__navSp-lo">
+                <div class="c-logo">
+                    <img src="images/logo-01.svg" alt="" class="c-logo__logoImg">
+                    <img src="images/logo-02.png" alt="蓼科ごとう農園" class="c-logo__logoName">
+                </div><!-- /.logo -->
+                <ul class="mv__list mv__list-lo">
+                    <li class="mv__item mv__item-lo"><a href="#about" class="mv__link">この農園について</a></li>
+                    <li class="mv__item mv__item-lo"><a href="#product" class="mv__link">製品一覧</a></li>
+                    <li class="mv__item mv__item-lo"><a href="#info" class="mv__link">お知らせ</a></li>
+                    <li class="mv__item mv__item-lo"><a href="#faq" class="mv__link">FAQ</a></li>
+                    <li class="mv__item mv__item-lo"><a href="#access" class="mv__link">アクセス</a></li>
+                    <li class="mv__item"><a href="#contact" class="mv__link">お問い合わせ</a></li>
+                </ul><!-- mv__list -->
+            </div><!-- /.mv__navSp -->
+        </div><!-- /.mv -->
+        <div class="c-logo c-logo--lg c-logo--lg-lo">
+            <img src="images/logo-01.svg" alt="" class="c-logo__logoImg--lg">
+            <img src="images/logo-02.png" alt="蓼科ごとう農園" class="c-logo__logoName">
+        </div><!-- /.logo -->
+        <nav class="navPc navPc-lo">
+            <ul class="navPc__list navPc__list--left-lo">
+                <li class="navPc__item navPc__item-lo"><a href="#about" class="navPc__link">この農園について</a></li>
+                <li class="navPc__item navPc__item-lo"><a href="#product" class="navPc__link">製品一覧</a></li>
+                <li class="navPc__item navPc__item-lo"><a href="#info" class="navPc__link">お知らせ</a></li>
+            </ul><!-- navPc__list -->
+            <ul class="navPc__list navPc__list--right-lo">
+                <li class="navPc__item navPc__item--right-lo"><a href="#faq" class="navPc__link navPc__link">FAQ</a></li>
+                <li class="navPc__item navPc__item--right-lo"><a href="#access" class="navPc__link navPc__link">アクセス</a></li>
+                <li class="navPc__item navPc__item--right-lo"><a href="#contact" class="navPc__link navPc__link">お問い合わせ</a></li>
+            </ul><!-- navPc__list -->
+        </nav><!-- /.nav -->
+        <div class="about about-lo" id="about">
+            <h2 class="about__title about__title-lo">蓼科の生きた豊かな恵みを、<br class="sp-br">そのままに</h2>
+            <p class="about__text about__text-lo">
+                「蓼科ごとう農園」は、蓼科の新鮮な農産物を提供するだけでなく、<br class="pc-br">
+                蓼科の自然環境を大切に守り、後世に残すことを使命としています。<br>
+                私たちは、農業に従事する者として、<br class="pc-br">
+                土地や水、空気といった自然環境がもたらす恩恵に感謝し、<br class="pc-br">
+                その恩恵を受け継ぐ未来の世代にも、<br class="pc-br">
+                同じような恩恵を受け継ぐことができるよう、<br class="pc-br">
+                最善を尽くしています。<br>
+                そのため、私たちは有機農法を導入し、<br class="pc-br">
+                化学肥料や農薬を極力使用しない栽培方法を取り入れています。<br>
+                また、自然災害に備え、耕作放棄地の再生や山の植林活動など、<br class="pc-br">
+                地域の環境保全活動にも積極的に参加しています。<br>
+                私たちは、「蓼科ごとう農園」を通じて、<br class="pc-br">
+                蓼科の美しい自然を末永く守り、<br class="pc-br">
+                地域の豊かな暮らしを支えることを目指しています。<br>
+            </p>
+            <img src="images/about-01.png" alt="" class="about__img01 about__img01-lo">
+            <img src="images/about-02.png" alt="" class="about__img02 about__img02-lo">
+        </div><!-- /.about -->
+        <div class="product product-lo" id="product">
+            <h2 class="h2__title product__title-lo">製品一覧</h2>
+            <div class="product__list c-swiper">
+                <div class="swiper-wrapper">
+                    <div class="c-productCard swiper-slide">
+                        <img src="images/brussels-sprouts.jpg" class="c-productCard__img" alt="">
+                        <div class="c-productCard__textContents">
+                            <p class="c-productCard__text">
+                                標高1,000mオーバーの蓼科高原だからこその、あまあま芽キャベツ!! 1kg
+                            </p>
+                            <p class="c-productCard__price">
+                                ￥ 4,200（税込）
+                            </p>
+                        </div>
+                    </div>
+                    <div class="c-productCard swiper-slide">
+                        <img src="images/strawberries.jpg" class="c-productCard__img" alt="">
+                        <div class="c-productCard__textContents">
+                            <p class="c-productCard__text">
+                                「あいまりん」「サマープリンセス」「サマーリリカル」「よつぼし」など詰め合わせ10パック
+                            </p>
+                            <p class="c-productCard__price">
+                                ￥ 4,800（税込）
+                            </p>
+                        </div>
+                    </div>
+                    <div class="c-productCard swiper-slide">
+                        <img src="images/grapes.jpg" class="c-productCard__img" alt="">
+                        <div class="c-productCard__textContents">
+                            <p class="c-productCard__text">
+                                蓼科ごとう農園オリジナル品種の「シャインマスカット」と「ナガノパープル」500g
+                            </p>
+                            <p class="c-productCard__price">
+                                ￥ 7,700（税込）
+                            </p>
+                        </div>
+                    </div>
+                    <div class="c-productCard swiper-slide">
+                        <img src="images/brussels-sprouts.jpg" class="c-productCard__img" alt="">
+                        <div class="c-productCard__textContents">
+                            <p class="c-productCard__text">
+                                標高1,000mオーバーの蓼科高原だからこその、あまあま芽キャベツ!! 1kg
+                            </p>
+                            <p class="c-productCard__price">
+                                ￥ 4,200（税込）
+                            </p>
+                        </div>
+                    </div>
+                    <div class="c-productCard swiper-slide">
+                        <img src="images/strawberries.jpg" class="c-productCard__img" alt="">
+                        <div class="c-productCard__textContents">
+                            <p class="c-productCard__text">
+                                「あいまりん」「サマープリンセス」「サマーリリカル」「よつぼし」など詰め合わせ10パック
+                            </p>
+                            <p class="c-productCard__price">
+                                ￥ 4,800（税込）
+                            </p>
+                        </div>
+                    </div>
+                    <div class="c-productCard swiper-slide">
+                        <img src="images/grapes.jpg" class="c-productCard__img" alt="">
+                        <div class="c-productCard__textContents">
+                            <p class="c-productCard__text">
+                                蓼科ごとう農園オリジナル品種の「シャインマスカット」と「ナガノパープル」500g
+                            </p>
+                            <p class="c-productCard__price">
+                                ￥ 7,700（税込）
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info info-lo" id="info">
+            <h2 class="h2__title info__title-lo">お知らせ</h2>
+            <ul class="info__list info__list-lo">
+                <li class="info__item">
+                    <a href="" class="info__link info__link-lo">
+                        <p class="info__date">2023/06/12</p>
+                        <p class="info__text">闇落ちイチゴの販売を開始します。</p>
+                    </a>
+                </li>
+                <li class="info__item">
+                    <a href="" class="info__link info__link-lo">
+                        <p class="info__date">2023/05/14</p>
+                        <p class="info__text">NHK「うまいッ！（全国放送）」 に蓼科ごとう農園が登場。</p>
+                    </a>
+                </li>
+                <li class="info__item">
+                    <a href="" class="info__link info__link-lo info__link--last">
+                        <p class="info__date">2023/04/14</p>
+                        <p class="info__text">白樺湖直売所で、新鮮な春野菜と果物を販売しています</p>
+                    </a>
+                </li>
+            </ul>
+            <img src="images/grapes-middle.png" alt="" class="info__img info__img-lo">
+        </div><!-- /.info -->
+        <div class="faq faq-lo" id="faq">
+            <h2 class="h2__title faq__title">FAQ</h2>
+            <div class="faq__contents faq__contents-lo">
+                <div class="faq__card accordion-parent">
+                    <a href="#" class="faq__question faq__question-lo accordion-title">
+                        冷蔵便で配送できますか？
+                    </a>
+                    <p class="faq__answer faq__answer-lo accordion-content">
+                        冷蔵便に対応しています。その場合別途150円かかります。
+                    </p>
+                </div>
+                <div class="faq__card accordion-parent">
+                    <a href="#" class="faq__question faq__question-lo accordion-title">
+                        どのような支払い方法がありますか？
+                    </a>
+                    <p class="faq__answer faq__answer-lo faq__answer--open accordion-content">
+                        商品代引きとクレジットカード決済があります。代引き手数料は、10,800円未満で税込330円・10,800円以上32,400円未満で税込440円・32,400円以上102,400円未満で税込660円です。手数料はお客様のご負担となりますのでご了承ください。クレジットカード決済は、JCB・VISA・master・ダイナース・アメリカンエキスプレスのマークが入っているカードすべてご利用になれます。
+                    </p>
+                </div>
+                <div class="faq__card accordion-parent">
+                    <a href="#" class="faq__question faq__question-lo accordion-title">
+                        プレゼント用にラッピングすることはできますか？
+                    </a>
+                    <p class="faq__answer faq__answer-lo accordion-content">
+                        可能です。ラッピングが必要な場合は、購入時にフォームの「ラッピングを希望」にチェックを入れてください。
+                    </p>
+                </div>
+                <div class="faq__card accordion-parent">
+                    <a href="#" class="faq__question faq__question-lo accordion-title">
+                        いちご狩りの予約は必要ですか
+                    </a>
+                    <p class="faq__answer faq__answer-lo accordion-content">
+                        繁忙期（１～３月、GW期間中）の土日祝日は予約はご遠慮いただいておりますが、平日または繁忙期以外の土日祝日はご予約可能です。
+                    </p>
+                </div>
+                <div class="faq__card accordion-parent">
+                    <a href="#" class="faq__question faq__question-lo accordion-title">
+                        海外発送できますか？
+                    </a>
+                    <p class="faq__answer faq__answer-lo accordion-content">
+                        現在のところ対応できておりません。海外からのご注文で日本国内への発送は承っております。
+                    </p>
+                </div>
+            </div>
+            <img src="images/breakfast-middle.png" alt="" class="faq__img">
+        </div><!-- /.faq -->
+        <div class="access access-lo" id="access">
+            <h2 class="h2__title access__title">アクセス</h2>
+            <div class="access__contents access__contents-lo">
+                <ul class="access__list">
+                    <li class="access__item access__item-lo">
+                        <p class="access__header">会社名</p>
+                        <p class="access__text">蓼科ごとう農園</p>
+                    </li>
+                    <li class="access__item access__item-lo">
+                        <p class="access__header">代表者名</p>
+                        <p class="access__text">後藤 優香</p>
+                    </li>
+                    <li class="access__item access__item-lo">
+                        <p class="access__header">所在地</p>
+                        <p class="access__text">長野県茅野市北山×××××</p>
+                    </li>
+                    <li class="access__item access__item-lo">
+                        <p class="access__header">E-mail</p>
+                        <p class="access__text">tateshina-goto@gmail.com</p>
+                    </li>
+                </ul>
+                <div class="access_mapContents">
+                    <div class="access__map" id="map"> </div>
+                </div>
+            </div>
+            <img src="images/Brussels_sprouts-middle.png" alt="" class="access__img">
+        </div><!-- /.access -->
+        <div class="contact contact-lo" id="contact">
+            <h2 class="h2__title contact__title-lo">お問い合わせ</h2>
+            <p class="contact__text">ご購入・販売に関しましては、<br class="sp-br">下記よりお気軽にお問い合わせください。</p>
+            <form  target="hidden_iframe" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScE7zlPAGxyqVj5WdbNZcbl54YQd4g0SHDbp80hE6-skOwKyg/formResponse" method="post" class="form form-lo" id="form">
+                <h3 class="form__title">お問い合わせメールフォーム</h3>
+                <div class="form__contents-lo">
+                    <div class="form__group form__group-lo">
+                        <p class="form__radioTitle form__radioTitle-lo">お問い合わせ種類<span class="form__tag form__tag-lo">必須</span></p>
+                        <div class="form__typeRadio">
+                            <label for="type01" class="c-formReset__radio-label form__label form__label--radio form__label--radio-lo"><input type="radio" name="entry.1567195944" id="type01" class="c-formReset__radio" value="弊社製品について" required><span class="c-formReset__radio-span">弊社製品について</span></label>
+                            <label for="type02" class="c-formReset__radio-label form__label form__label--radio form__label--radio-lo"><input type="radio" name="entry.1567195944" id="type02" class="c-formReset__radio" value="いちご狩りについて" required><span class="c-formReset__radio-span">いちご狩りについて</span></label>
+                            <label for="type03" class="c-formReset__radio-label form__label form__label--radio"><input type="radio" name="entry.1567195944" id="type03" class="c-formReset__radio" value="その他のお問い合わせ" required><span class="c-formReset__radio-span">その他のお問い合わせ</span></label>
+                        </div>
+                    </div>
+                    <div class="form__group form__groupInput-lo">
+                        <label for="name" class="form__label form__label-lo">
+                            お名前<span class="form__tag form__tag-lo">必須</span>
+                        </label>
+                        <input type="text" name="entry.1081976929" id="name" class="c-formReset__input form__input" required>
+                    </div>
+                    <div class="form__group form__groupInput-lo">
+                        <label for="post" class="form__label form__label-lo">
+                            郵便番号
+                        </label>
+                        <input type="text" name="entry.1676005596" id="post" class="c-formReset__input form__input form__input--post form__input--post-lo">
+                    </div>
+                    <p class="form__errorMessage form__errorMessage--post"></p>
+                    <div class="form__group form__groupInput-lo">
+                        <label for="adress" class="form__label form__label-lo">
+                            ご住所<span class="form__tag form__tag-lo">必須</span>
+                        </label>
+                        <input type="text" name="entry.580471779" id="adress" class="c-formReset__input form__input" required>
+                    </div>
+                    <div class="form__group form__groupInput-lo">
+                        <label for="mail" class="form__label form__label-lo">
+                            メールアドレス<span class="form__tag form__tag-lo">必須</span>
+                        </label>
+                        <input type="email" name="entry.1983611184" id="mail" class="c-formReset__input form__input" required>
+                    </div>
+                    <p class="form__errorMessage form__errorMessage--mail"></p>
+                    <div class="form__group form__groupInput-lo">
+                        <label for="tel" class="form__label form__label-lo">
+                            電話番号<span class="form__tag form__tag-lo">必須</span>
+                        </label>
+                        <input type="text" name="entry.1310387543" id="tel" class="c-formReset__input form__input" required>
+                    </div>
+                    <p class="form__errorMessage form__errorMessage--tel"></p>
+                    <div class="form__group form__groupInput-lo">
+                        <label for="content" class="form__label form__label-lo form__label--info-lo">
+                            お問い合わせ内容<span class="form__tag form__tag-lo">必須</span>
+                        </label>
+                        <textarea name="entry.2003830163" id="content" class="c-formReset__input c-formReset__textarea form__input form__input--textarea" required></textarea><!-- /# -->
+                    </div>
+                </div>
+                <input type="submit" value="送信する" id="form-submit" class="c-formReset__input form__button form__button-lo">
+            </form>
+            <iframe
+            name="hidden_iframe"
+            id="hidden_iframe"
+            style="display: none"
+            onload="if(submited){window.location='thanks.html#contact';}"
+        ></iframe>
+        </div><!-- /.contact -->
+    </main>
+    <footer class="footer">
+        <div class="footer__contents footer__contents-lo">
+            <div class="c-logo c-logo--lg-lo footer__logo-lo">
+                <img src="images/logo-01.svg" alt="" class="c-logo__logoImg c-logo__logoImg--lg">
+                <img src="images/logo-02.png" alt="蓼科ごとう農園" class="c-logo__logoName">
+            </div><!-- /.logo -->
+            <ul class="footer__nav footer__nav-lo">
+                <li class="footer__item"><a href="#about" class="footer__link">この農園について</a></li>
+                <li class="footer__item"><a href="#product" class="footer__link">製品一覧</a></li>
+                <li class="footer__item"><a href="#info" class="footer__link">お知らせ</a></li>
+                <li class="footer__item"><a href="#faq" class="footer__link">FAQ</a></li>
+                <li class="footer__item"><a href="#access" class="footer__link">アクセス</a></li>
+                <li class="footer__item"><a href="#contact" class="footer__link">お問い合わせ</a></li>
+            </ul>
+            <img src="images/strawberry-middle.jpg" alt="" class="footer__img footer__img01-lo">
+            <img src="images/livestock-middle.jpg" alt="" class="footer__img footer__img02-lo">
+        </div>
+        <p class="footer__copyRight">
+            &copy; 2019 GOTONOUEN.
+        </p>
+    </footer>
+    <script src="js/bamburger.js"></script> 
+    <script src="js/myswiper.js"></script> 
+    <script src="js/accordion.js"></script> 
+    <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/myform.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4Henir0TcpWyawHxW3twF9u2WrZkQbN4&callback=initMap">
+    </script>
 </body>
 </html>

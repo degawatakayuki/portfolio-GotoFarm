@@ -7,23 +7,21 @@ html {
     font-size: var.$font-sp;
     color: var.$main-color;
     //タブレットサイズ
-    @media screen and (max-width: 1023px) and (min-width: 768px) {
+    @media screen and (max-width: 1023px) and (min-width: 751px) {
         font-size: 1vw;
     }
     //PCサイズ
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1280px) {
         font-size: var.$font-pc;
     }
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: "ヒラギノ角互　ProN",
-        "Hiragino Kaku Gothic ProN",
-        "MS Pゴシック",
-        "MS PGothic",
-        "メイリオ",
-        "Meiryo",
-        sans-serif;
+    font-family: "Noto Sans JP";
+    font-weight: bold;
+    background-color: var.$bg-main;
+
     * {
         box-sizing: border-box;
     }
@@ -50,20 +48,32 @@ h1,h2,h3,h4,h5,h6 {
 
 .container {
     display: block;
-    width: 90.8%;
+    width: 100%;
     margin: 0 auto;
 
-    @include min.breakpoint(pc) {
+    @include min.breakpoint(tablet) {
         width: 100%;
-        max-width: 108rem;
+        max-width: 128rem;
     }
     
+}
+.h2__title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center;
 }
 
 .sp-br {
     display: block;
 
-    @include min.breakpoint(pc) {
+    @include min.breakpoint(tablet) {
         display: none;
+    }
+}
+.pc-br {
+    display: none;
+
+    @include min.breakpoint(tablet) {
+        display: block;
     }
 }

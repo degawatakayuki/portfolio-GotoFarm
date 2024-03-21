@@ -1,6 +1,7 @@
-$main-color: #2498B3;
+$main-color: #4E301B;
 
-$bg-color1: #FFF7EF;
+$bg-white: #fff;
+$bg-main: #FDF9EF;
 
 $text-maincolor: #707070;
 
@@ -11,6 +12,6 @@ $font-pc: 62.5%;                    //PCのフォントサイズ　10px
 
 
 /* ブレークポイント */
-$md-breakpoint: 641px;
-$pc-breakpoint: 769px;
+$md-breakpoint: 768px;
+$pc-breakpoint: 1024px;
 $wd-breakpoint: 961px;

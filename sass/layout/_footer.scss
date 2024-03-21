@@ -1,0 +1,58 @@
+@use "../foundation/mixins" as min;
+@use "../foundation/variables" as var;
+
+.footer {
+    &__contents {
+        position: relative;
+        background-color: #fff;
+        &-lo {
+            padding-top: 2.2rem;
+        }
+    }
+    &__logo-lo {
+        margin: 0 auto;
+    }
+    &__nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+        @include min.breakpoint(tablet) {
+            flex-wrap: unset;
+            gap: 2.5rem;
+        }
+        &-lo {
+            margin-top: 7.3rem;
+            padding-bottom: 9.7rem;
+        }
+    }
+    &__link {
+        font-size: 1.6rem;
+        color: var.$main-color;
+    }
+    &__copyRight {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 6rem;
+        background-color: #D9D9D9;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    &__img {
+        width: 12rem;
+        @include min.breakpoint(tablet) {
+            width: unset;
+        }
+    }
+    &__img01-lo {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    &__img02-lo {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
